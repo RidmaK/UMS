@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\backend\CityController;
 use App\Http\Controllers\backend\CountryController;
+use App\Http\Controllers\backend\DepartmentController;
 use App\Http\Controllers\backend\StateController;
 use App\Http\Controllers\backend\UserChangePasswordController;
 use App\Http\Controllers\backend\UserController;
@@ -30,5 +31,6 @@ Route::resource('users', UserController::class);
 Route::resource('countries', CountryController::class);
 Route::resource('states', StateController::class);
 Route::resource('cities', CityController::class);
+Route::resource('departments', DepartmentController::class);
 
 Route::post('users/{user}/change-password',[UserChangePasswordController::class,'change_password'])->name('users.change.password');
